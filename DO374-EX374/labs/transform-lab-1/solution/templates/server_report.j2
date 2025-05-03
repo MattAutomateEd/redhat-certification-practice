@@ -1,0 +1,9 @@
+Server Inventory Report
+------------------------
+{% for server in servers.servers %}
+- Hostname: {{server.hostname}}
+  Role: {{server.role}}
+  IP: {{server.ip}} 
+  Location: {{ locations[server.hostname] }} 
+
+{% endfor %}

@@ -1,0 +1,5 @@
+locations:
+  web1: "US-East"
+  web2: "US-West"
+  db1: "US-East"
+

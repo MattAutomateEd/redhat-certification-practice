@@ -1,0 +1,16 @@
+---
+ansible-navigator:
+  color:
+    enable: true
+    osc4: true
+  editor:
+    command: vi +{line_number} {filename}
+    console: true
+  execution-environment:
+    image: registry.redhat.io/ansible-automation-platform-24/ee-supported-rhel8:latest
+    pull:
+      policy: missing
+  mode: stdout
+  playbook-artifact:
+    enable: false
+

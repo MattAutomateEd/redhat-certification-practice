@@ -1,0 +1,36 @@
+---
+- name: Transform and query data using filters and plugins
+  hosts: localhost
+  gather_facts: false
+  vars_files:
+    - vars/external_vars.yml
+
+  tasks:
+
+    - name: Load server data from JSON file using lookup
+      ansible.builtin.set_fact:
+        servers: "{{ lookup('file', 'files/servers.json') | from_json }}"
+
+    - name: Load subnet data from YAML file
+      ansible.builtin.set_fact:
+        subnet_data: "{{ lookup('file', 'files/subnets.yml') | from_yaml }}"
+
+    - name: Extract only frontend servers using selectattr
+      ansible.builtin.set_fact:
+        frontend_servers: "{{ servers.servers | selectattr('role', 'equalto', 'frontend') | list }}"
+
+    - name: Extract only IP addresses from frontend servers using map
+      ansible.builtin.set_fact:
+        frontend_ips: "{{ frontend_servers | map(attribute='ip') | list }}"
+
+    - name: Use community.general.ipaddr to find if IPs belong to subnet
+      debug:
+        msg: "{{ item }} is in 192.168.10.0/24"
+      loop: "{{ frontend_ips | select('ipaddr', '192.168.10.0/24') | list }}"
+
+    - name: Generate report using template plugin
+      ansible.builtin.template:
+        src: templates/server_report.j2
+        dest: /tmp/server_report.txt
+
+

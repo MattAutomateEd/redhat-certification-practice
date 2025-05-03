@@ -4,7 +4,7 @@ Welcome to my structured lab environment for preparing for Red Hat certification
 
 - 🧑‍💻 **RHCSA (EX200)** – Red Hat Certified System Administrator  
 - 🧑‍🔧 **RHCE (EX294)** – Red Hat Certified Engineer  
-- 🤖 **DO374 / EX374** – Red Hat Certified Specialist in Developing Automation with Ansible Automation Platform
+- 🤖 **DO374 (EX374)** – Red Hat Certified Specialist in Developing Automation with Ansible Automation Platform
 
 This repository contains real-world, hands-on exercises that align with official Red Hat exam objectives. Labs are designed to reinforce key skills through repetition, filtered logic, and task-focused automation.  Each lab is based upon the exam objectives. 
 
@@ -14,13 +14,13 @@ This repository contains real-world, hands-on exercises that align with official
 ---
 
 📁 Directory Structure
-- RHCSA/
+- RHCSA-EX200/
   - labs/ – RHCSA playbooks and exercises
   - EX200-objectives.md – RHCSA exam objective mapping
-- RHCE/
+- RHCE-EX294/
   - labs/ – RHCE automation playbooks
   - EX294-objectives.md – RHCE exam objectives
-- DO374/
+- DO374-EX374/
   - labs/ – Ansible Automation Platform labs
   - EX374-objectives.md – DO374 exam objectives
 - README.md – Main documentation for the repo      <-- you are here

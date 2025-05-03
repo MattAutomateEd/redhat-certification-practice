@@ -1,0 +1,8 @@
+- name: Transform and query data using filters and plugins
+  hosts: localhost
+  gather_facts: false
+  vars_files:
+    - vars/external_vars.yml
+
+  tasks:
+
