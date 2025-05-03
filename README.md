@@ -23,7 +23,7 @@ This repository contains real-world, hands-on exercises that align with official
 - DO374/
   - labs/ – Ansible Automation Platform labs
   - EX374-objectives.md – DO374 exam objectives
-- README.md – Main documentation for the repo
+- README.md – Main documentation for the repo      <-- you are here
 
 
 ---
