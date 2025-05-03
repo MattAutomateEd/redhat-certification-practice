@@ -13,4 +13,34 @@ This repository contains real-world, hands-on exercises that align with official
 
 ---
 
-## 🗂 Directory Structure
+📁 Directory Structure
+- RHCSA/
+  - labs/ – RHCSA playbooks and exercises
+  - EX200-objectives.md – RHCSA exam objective mapping
+- RHCE/
+  - labs/ – RHCE automation playbooks
+  - EX294-objectives.md – RHCE exam objectives
+- DO374/
+  - labs/ – Ansible Automation Platform labs
+  - EX374-objectives.md – DO374 exam objectives
+- README.md – Main documentation for the repo
+
+
+---
+
+## 🚀 Lab Features
+
+- 🔁 **Repeatable playbook exercises** with clean data sets
+- 🧠 **INTJ-style learning**: no preloaded answers, solve logically
+- ✅ Checkpoint-based: debug outputs confirm correctness at each step
+- 🔌 Uses official and community Ansible plugins + filters
+- 🎯 Exam-focused: every lab maps directly to a Red Hat objective
+
+---
+
+## 🧩 How to Use This Repo
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/mattautomated/redhat-certification-practice.git
+   cd redhat-certification-practice
