@@ -36,16 +36,19 @@ ansible-navigator
 ## inventory/inventory
 Update your inventory file
 
+## Login into https://registry.redhat.io (podman)
+podman login https://registry.redhat.io
 
 ## Solutions
 See the solutions directory for the solution
+
 
 ---
 
 ## ✅ Task 1: Load Server Data from JSON File
 
 **Goal**:  
-Load structured data from the `files/servers.json` file using a lookup plugin, and store the parsed result in a variable called `servers`.
+Load structured data from the `files/servers.json` file using a lookup plugin, and store the parsed result in a variable called `servers`.  Use the existing playbook.yml and add task 1.  Try to use ansible-navigator if you have a execution environment.  However, ansible-playbook will work as well.
 
 ---
 
