@@ -3,10 +3,6 @@
 This lab is designed to prepare you for the **EX374 exam objective**:
 
 > **Transform Data with Filters and Plugins**  
-> - Use lookup plugins to pull data from files, templates, and external sources  
-> - Use filters to convert/transform data (json_query, selectattr, map, etc.)  
-> - Parse networking data (IPs, subnets)  
-> - Implement loops beyond simple lists (using plugins and filters)
 
 ---
 
@@ -36,6 +32,13 @@ Update ansible.cfg remote_user to your user. (replace MattAutomateEd)
 ## RPM Requirements
 ansible-automation-platform-common
 ansible-navigator
+
+## inventory/inventory
+Update your inventory file
+
+
+## Solutions
+See the solutions directory for the solution
 
 ---
 
