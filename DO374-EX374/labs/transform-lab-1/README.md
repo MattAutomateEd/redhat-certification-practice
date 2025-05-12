@@ -48,14 +48,18 @@ See the solutions directory for the solution
 ## ✅ Task 1: Load Server Data from JSON File
 
 **Goal**:  
-Load structured data from the `files/servers.json` file using a lookup plugin, and store the parsed result in a variable called `servers`.  Use the existing playbook.yml and add task 1.  Try to use ansible-navigator if you have a execution environment.  However, ansible-playbook will work as well.
+Load structured data from the `files/servers.json` file using a lookup plugin, and store the parsed result in a variable called `servers`.  Use the existing playbook.yml and add task 1.  
+
+Try to use ansible-navigator if you have a execution environment.  However, ansible-playbook will work as well.  Use debug to help see the output of the variable
 
 ---
 
 ## ✅ Task 2: Load Subnet Data from YAML File
 
 **Goal**:  
-Load structured data from the `files/subnets.yml` file using a lookup plugin, and store the parsed result in a variable called `subnet_data`.
+Load structured data from the `files/subnets.yml` file using a lookup plugin, and store the parsed result in a variable called `subnet_data`. 
+
+Try to use ansible-navigator if you have a execution environment.  However, ansible-playbook will work as well.  Use debug to help see the output of the variable.  Be sure to use the right filter so it can be displayed in the output.
 
 ---
 
