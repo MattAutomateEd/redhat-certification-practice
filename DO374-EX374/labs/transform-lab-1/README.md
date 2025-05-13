@@ -83,7 +83,7 @@ Store this list of IPs in a variable called `frontend_ips`.
 
 **Goal**:  
 From the list of `frontend_ips`, identify and print only the IPs that belong to the `192.168.10.0/24` subnet.  
-Use an appropriate filter for subnet logic and loop over the valid results.
+Use an appropriate filter for subnet logic and loop over the valid results. select('ipaddr') will not work, use when statement and ansible.utils.ipaddr filter.
 
 ---
 
