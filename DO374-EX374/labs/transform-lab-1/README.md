@@ -91,7 +91,7 @@ Use an appropriate filter for subnet logic and loop over the valid results. sele
 ## ✅ Task 6: Generate a Server Report from a Template
 
 **Goal**:  
-Render a report from the `templates/server_report.j2` template file using the full list of servers and their location metadata (from `vars/external_vars.yml`).
+Render a report from the `templates/server_report.j2` template file using the full list of servers and their location metadata (from `vars/external_vars.yml`) and variables created in earlier tasks.
 
 Edit the templates/server_report.j2 and ensure the following report looks like:
 
