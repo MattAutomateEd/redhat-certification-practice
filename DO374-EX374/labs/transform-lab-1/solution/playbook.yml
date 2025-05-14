@@ -1,36 +1,51 @@
 ---
 - name: Transform and query data using filters and plugins
-  hosts: localhost
+  hosts: managedhost1
   gather_facts: false
   vars_files:
     - vars/external_vars.yml
 
   tasks:
-
-    - name: Load server data from JSON file using lookup
+    - name: Task 1 Load Serer Data from JSON File
       ansible.builtin.set_fact:
-        servers: "{{ lookup('file', 'files/servers.json') | from_json }}"
+        servers: "{{ lookup( 'ansible.builtin.file' ,'files/servers.json') | from_json }}"
 
-    - name: Load subnet data from YAML file
+    - name: Show Task 1
+      ansible.builtin.debug:
+        var: servers.servers
+
+    - name: Task 2 Load Subnet Data from YAML File
       ansible.builtin.set_fact:
-        subnet_data: "{{ lookup('file', 'files/subnets.yml') | from_yaml }}"
+        subnet_data: "{{ lookup('ansible.builtin.file','files/subnets.yml') | from_yaml }}"
 
-    - name: Extract only frontend servers using selectattr
+    - name: Show Task 2
+      ansible.builtin.debug:
+        var: subnet_data
+
+    - name: Task 3 Extract Frontend Servers
       ansible.builtin.set_fact:
-        frontend_servers: "{{ servers.servers | selectattr('role', 'equalto', 'frontend') | list }}"
+        frontend_servers: "{{ servers.servers | selectattr('role','equalto','frontend')}}"
 
-    - name: Extract only IP addresses from frontend servers using map
+    - name: Show Task 3
+      ansible.builtin.debug:
+        var: frontend_servers
+
+    - name: Task 4 Extract Frontend IPs
       ansible.builtin.set_fact:
-        frontend_ips: "{{ frontend_servers | map(attribute='ip') | list }}"
+        frontend_ips: "{{ frontend_servers | map(attribute='ip') }}"
 
-    - name: Use community.general.ipaddr to find if IPs belong to subnet
-      debug:
+    - name: Show  Task 4
+      ansible.builtin.debug:
+        var: frontend_ips
+
+
+    - name: Task 5 Filter IPs That Belong to Subnet
+      ansible.builtin.debug:
         msg: "{{ item }} is in 192.168.10.0/24"
-      loop: "{{ frontend_ips | select('ipaddr', '192.168.10.0/24') | list }}"
+      loop: "{{ frontend_ips }}"
+      when: item| ansible.utils.ipaddr('192.168.10.0/24')
 
-    - name: Generate report using template plugin
+    - name: Task 6 Generate a Server Report from a Template to /tmp/server_report.txt
       ansible.builtin.template:
         src: templates/server_report.j2
         dest: /tmp/server_report.txt
-
-
