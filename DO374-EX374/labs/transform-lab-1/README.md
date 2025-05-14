@@ -111,7 +111,7 @@ Output the final report to:
 
 Focus on:
 - Using `lookup()` properly with `from_json` / `from_yaml`,
-- Mastering `selectattr`, `map`, `select`, and `ansible.utils.ipaddr`,
+- Mastering `selectattr`, `map`, and `ansible.utils.ipaddr`,
 - Rendering structured Jinja2 output from filtered data.
 
 
