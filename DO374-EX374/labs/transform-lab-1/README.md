@@ -95,8 +95,9 @@ Render a report from the `templates/server_report.j2` template file using the fu
 
 Edit the templates/server_report.j2 and ensure the following report looks like:
 
-```
 The report should include for each server: (and should look like)
+
+```
 - Hostname
   Role
   IP
