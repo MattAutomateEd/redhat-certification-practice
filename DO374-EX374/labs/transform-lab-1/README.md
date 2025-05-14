@@ -92,11 +92,16 @@ Use an appropriate filter for subnet logic and loop over the valid results. sele
 **Goal**:  
 Render a report from the `templates/server_report.j2` template file using the full list of servers and their location metadata (from `vars/external_vars.yml`).
 
+Edit the templates/server_report.j2 and ensure the following report looks like:
+
+
 The report should include for each server: (and should look like)
 - Hostname
   Role
   IP
   Location (based on hostname key from `locations` dictionary)
+
+
 
 If no location is available for a given hostname, show `"Unknown"`.
 
