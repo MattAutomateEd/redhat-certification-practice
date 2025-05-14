@@ -8,7 +8,7 @@ This lab is designed to prepare you for the **EX374 exam objective**:
 
 ## 📂 Lab Layout
 
-Create the following directory and file structure:
+Create the following directory and file structure: (most has already been created for you, but look over the files and directories)
 
 ```
 transform-lab-1/
