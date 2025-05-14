@@ -38,7 +38,6 @@
       ansible.builtin.debug:
         var: frontend_ips
 
-
     - name: Task 5 Filter IPs That Belong to Subnet
       ansible.builtin.debug:
         msg: "{{ item }} is in 192.168.10.0/24"
