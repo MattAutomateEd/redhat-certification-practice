@@ -10,6 +10,7 @@ This lab is designed to prepare you for the **EX374 exam objective**:
 
 Create the following directory and file structure:
 
+```
 transform-lab-1/
 ├── inventory/
 │ └── hosts
@@ -22,7 +23,7 @@ transform-lab-1/
 │ └── external_vars.yml
 ├── playbook.yml
 └── README.md ← (this file)
-
+```
 
 
 ## Modify ansible.cfg
@@ -94,13 +95,13 @@ Render a report from the `templates/server_report.j2` template file using the fu
 
 Edit the templates/server_report.j2 and ensure the following report looks like:
 
-
+```
 The report should include for each server: (and should look like)
 - Hostname
   Role
   IP
   Location (based on hostname key from `locations` dictionary)
-
+```
 
 
 If no location is available for a given hostname, show `"Unknown"`.
