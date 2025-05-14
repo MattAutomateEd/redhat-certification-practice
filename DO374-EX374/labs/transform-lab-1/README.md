@@ -98,10 +98,12 @@ Edit the templates/server_report.j2 and ensure the following report looks like:
 The report should include for each server: (and should look like)
 
 ```
-- Hostname
-  Role
-  IP
-  Location (based on hostname key from `locations` dictionary)
+Server Inventory Report
+------------------------
+- Hostname: <replaceMe>
+  Role: <replaceMe>
+  IP: <replaceMe>
+  Location: <replaceMe> (based on hostname key from `locations` dictionary)
 ```
 
 
