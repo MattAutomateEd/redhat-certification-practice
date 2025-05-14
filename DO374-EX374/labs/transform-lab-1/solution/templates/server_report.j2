@@ -4,6 +4,5 @@ Server Inventory Report
 - Hostname: {{server.hostname}}
   Role: {{server.role}}
   IP: {{server.ip}} 
-  Location: {{ locations[server.hostname] }} 
-
+  Location: {{ locations[server.hostname]  | default('Unkown') }} 
 {% endfor %}
