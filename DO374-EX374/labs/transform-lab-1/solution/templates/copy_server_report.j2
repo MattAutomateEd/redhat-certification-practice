@@ -1,9 +1,0 @@
-Server Inventory Report
-------------------------
-{% for server in servers %}
-- Hostname: {{ server.hostname }}
-  Role: {{ server.role }}
-  IP: {{ server.ip }}
-  Location: {{ locations[server.hostname] | default('Unknown') }}
-{% endfor %}
-
