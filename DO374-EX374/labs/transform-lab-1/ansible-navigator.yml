@@ -7,10 +7,10 @@ ansible-navigator:
     command: vi +{line_number} {filename}
     console: true
   execution-environment:
-    image: registry.redhat.io/ansible-automation-platform-24/ee-supported-rhel8:latest
+    #image: registry.redhat.io/ansible-automation-platform-24/ee-supported-rhel8:latest
+    image: quay.io/ansible/creator-ee:latest
     pull:
       policy: missing
   mode: stdout
   playbook-artifact:
     enable: false
-
