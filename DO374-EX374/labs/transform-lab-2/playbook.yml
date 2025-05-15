@@ -1,0 +1,33 @@
+# playbook.yml
+---
+- name: Practice selectattr, select, and map filters
+  hosts: localhost
+  gather_facts: false
+  vars_files:
+    - vars/user_data.yml
+
+  tasks:
+    - name: Load department lookup data
+      set_fact:
+        dept_data: "{{ lookup('file', 'files/departments.yml') | from_yaml }}"
+
+    - name: Task 1 - Select only active users
+      # From the list of users, filter only those where "active" is true. Store this as "active_users".
+
+    - name: Task 2 - Extract usernames of active users
+      # From the "active_users" list, extract the "username" field of each user. Store this as "active_usernames".
+
+    - name: Task 3 - Select users in department 'ops'
+      # From the original "users" list, filter only users whose department is "ops". Store the result as "ops_users".
+
+    - name: Task 4 - Map ops user emails
+      # From the "ops_users" list, extract the "email" field of each user. Store this as "ops_user_emails".
+
+    - name: Task 5 - Show departments from external data
+      # Use the "dept_data" dictionary loaded earlier. Extract the "name" field of each department and print the result.
+
+    - name: Task 6 - Select departments that are active
+      # From "dept_data.departments", filter only those with "status: active". Store this as "active_depts".
+
+    - name: Task 7 - Show department heads of active departments
+      # From the filtered "active_depts" list, extract the "head" value of each. Print the list of department heads.

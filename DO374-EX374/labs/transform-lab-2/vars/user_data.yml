@@ -1,0 +1,18 @@
+---
+users:
+  - username: alice
+    email: alice@example.com
+    department: ops
+    active: true
+  - username: bob
+    email: bob@example.com
+    department: dev
+    active: false
+  - username: carol
+    email: carol@example.com
+    department: ops
+    active: true
+  - username: dave
+    email: dave@example.com
+    department: support
+    active: true

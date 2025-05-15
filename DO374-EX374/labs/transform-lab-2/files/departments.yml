@@ -1,0 +1,10 @@
+departments:
+  - name: ops
+    head: "Alice"
+    status: active
+  - name: dev
+    head: "Eve"
+    status: inactive
+  - name: support
+    head: "Frank"
+    status: active
