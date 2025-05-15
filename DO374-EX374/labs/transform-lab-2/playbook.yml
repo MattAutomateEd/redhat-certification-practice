@@ -8,8 +8,7 @@
 
   tasks:
     - name: Load department lookup data
-      set_fact:
-        dept_data: "{{ lookup('file', 'files/departments.yml') | from_yaml }}"
+      # using variable name dept_data, load files/departments.yml as yml data
 
     - name: Task 1 - Select only active users
       # From the list of users, filter only those where "active" is true. Store this as "active_users".
